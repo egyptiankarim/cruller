@@ -1,3 +1,17 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.panel {
+  margin-top: 250px;
+  opacity: 0.30;
+}
+
+.panel a {
+  text-decoration: none;
+}
+
+.jumbo {
+  font-family: "Cutive Mono";
+  font-size: 10.00vw;
+}

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  get 'about', to: 'about#index', as: :about
-  get 'about/index'
+  #get 'about', to: 'about#index', as: :about
+  #get 'about/index'
 
   root to: 'welcome#index'
   get 'welcome/index'
