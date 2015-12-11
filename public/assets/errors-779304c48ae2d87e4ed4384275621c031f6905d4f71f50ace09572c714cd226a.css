@@ -1,0 +1,22 @@
+/* line 5, /Users/karim/Code/cruller/app/assets/stylesheets/welcome.scss */
+.panel {
+  margin-top: 250px;
+  opacity: 0.30;
+}
+
+/* line 10, /Users/karim/Code/cruller/app/assets/stylesheets/welcome.scss */
+.panel a {
+  text-decoration: none;
+}
+
+/* line 14, /Users/karim/Code/cruller/app/assets/stylesheets/welcome.scss */
+.jumbo {
+  font-family: "Dosis";
+  font-size: 10.00vw;
+}
+
+/* line 19, /Users/karim/Code/cruller/app/assets/stylesheets/welcome.scss */
+.color-meta {
+  font-family: "Dosis";
+  font-size: 5.00vw;
+}

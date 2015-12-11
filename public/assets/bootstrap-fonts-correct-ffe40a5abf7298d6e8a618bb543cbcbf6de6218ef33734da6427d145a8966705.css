@@ -1,0 +1,7 @@
+/* How to override Bootstrap's font paths to fit Rails vendor asset conventions. */
+/* Bootstrap's fonts/ is in  vendor/assets/. */
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url(/assets/glyphicons-halflings-regular-f495f34e4f177cf0115af995bbbfeb3fcabc88502876e76fc51a4ab439bc8431.eot);
+  src: url(/assets/glyphicons-halflings-regular-f495f34e4f177cf0115af995bbbfeb3fcabc88502876e76fc51a4ab439bc8431.eot?#iefix) format("embedded-opentype"), url(/assets/glyphicons-halflings-regular-fc969dc1c6ff531abcf368089dcbaf5775133b0626ff56b52301a059fc0f9e1e.woff) format("woff"), url(/assets/glyphicons-halflings-regular-bd18efd3efd70fec8ad09611a20cdbf99440b2c1d40085c29be036f891d65358.ttf) format("truetype"), url(/assets/glyphicons-halflings-regular-5d234508037dc13a419ef6ce48f3fc73dbb477f1a162c052b872182b494e626e.svg#glyphicons_halflingsregular) format("svg");
+}

@@ -56,3 +56,5 @@ group :development, :production, :staging do
 end
 
 gem 'figaro'
+
+gem 'rails_12factor'
