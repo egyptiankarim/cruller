@@ -7,6 +7,7 @@ class WelcomeController < ApplicationController
     color_average = (@red + @green + @blue) / 3
 
     @panel_color = color_average > (255 / 2) ? "333" : "eee"
+    @text_color = color_average > (255 / 2) ? "eee" : "333"
 
     @hex_color = ("%s%s%s" % [@red, @green, @blue].map { |e| to_hex(e) })
   end
