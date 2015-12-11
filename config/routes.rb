@@ -1,11 +1,10 @@
 Rails.application.routes.draw do
-  get 'errors/404'
-
   #get 'about', to: 'about#index', as: :about
   #get 'about/index'
 
   root to: 'welcome#index'
-  get 'welcome/index'
+  get 'welcome/index', to: 'welcome#index', as: :welcome
+  get 'show/:colour(.:format)', to: 'welcome#show', as: :show
 
   match "/404" => "errors#error_404", via: [ :get, :post, :patch, :delete ]
 

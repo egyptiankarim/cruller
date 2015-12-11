@@ -1,20 +1,24 @@
 class WelcomeController < ApplicationController
+  COLOUR_MAX = 255
+  DARK_GREY = '333333'
+  LIGHT_GREY = 'EEEEEE'
+
   def index
-    @red = rand(255)
-    @green = rand(255)
-    @blue = rand(255)
+    @colour = Colour.random_colour
 
-    color_average = (@red + @green + @blue) / 3
-
-    @panel_color = color_average > (255 / 2) ? "333" : "eee"
-    @text_color = color_average > (255 / 2) ? "eee" : "333"
-
-    @hex_color = ("%s%s%s" % [@red, @green, @blue].map { |e| to_hex(e) })
+    @panel_colour = @colour.average > (COLOUR_MAX / 2) ? DARK_GREY : LIGHT_GREY
+    @text_colour = @colour.average > (COLOUR_MAX / 2) ? LIGHT_GREY : DARK_GREY
   end
 
-  private
+  def show
+    @colour = Colour.new(hex_code: params[:colour])
 
-  def to_hex(number = 0, padding = 2)
-    number.to_s(16).rjust(padding, '0').upcase
+    @panel_colour = @colour.average > (COLOUR_MAX / 2) ? DARK_GREY : LIGHT_GREY
+    @text_colour = @colour.average > (COLOUR_MAX / 2) ? LIGHT_GREY : DARK_GREY
+
+    if @colour.validate
+    else
+      render 'errors/error_404'
+    end
   end
 end

@@ -1,0 +1,10 @@
+<ul class="meta-list list-inline">
+  <li>
+    <%= link_to(show_path(colour: colour.to_s), class: "") do %>
+    <div style="color: #<%= panel_colour %>; opacity: 0.50;">
+      <span class="glyphicon glyphicon-link"></span>
+      <span class=""><%= "http://cruller.io/show/#{colour}" %></span>
+    </div>
+    <% end %>
+  </li>
+</ul>

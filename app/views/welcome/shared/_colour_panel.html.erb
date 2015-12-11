@@ -1,0 +1,16 @@
+<div class="panel" style="background-color: #<%= panel_colour %>;">
+  <%= link_to(root_path(), class: "") do %>
+  <div class="panel-body text-center" style="color: #<%= text_colour %>;">
+    <div class="jumbo jumbo-10">
+      #<%= colour %>
+    </div>
+    <div class="jumbo jumbo-3">
+      <ul class="list-inline">
+        <li>R: <%= colour.red %></li>
+        <li>G: <%= colour.green %></li>
+        <li>B: <%= colour.blue %></li>
+      </ul>
+    </div>
+  </div>
+  <% end %>
+</div>

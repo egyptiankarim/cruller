@@ -11,6 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20151211164404) do
+
+  create_table "colours", force: :cascade do |t|
+    t.string   "hex_code",   limit: 6
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+  end
+
+  add_index "colours", ["hex_code"], name: "index_colours_on_hex_code", unique: true
 
 end
