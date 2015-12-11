@@ -1,0 +1,23 @@
+<%- view_title "Welcome!" %>
+
+<% content_for :main do %>
+<style>
+  body {
+    background-color: #eee;
+  }
+</style>
+
+<div class="row">
+  <div class="col-xs-8 col-xs-offset-2 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
+    <div class="panel" style="background-color: #eee;">
+      <%= link_to(root_path(), class: "") do %>
+      <div class="panel-body text-center jumbo">
+        <div style="color: #333;">
+          404!
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+<% end %>

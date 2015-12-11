@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
+  get 'errors/404'
+
   #get 'about', to: 'about#index', as: :about
   #get 'about/index'
 
   root to: 'welcome#index'
   get 'welcome/index'
+
+  match "/404" => "errors#error_404", via: [ :get, :post, :patch, :delete ]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
