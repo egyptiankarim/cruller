@@ -13,6 +13,7 @@ Rails.application.config.assets.precompile += ['glyphicons-halflings-regular.*']
 
 # To support controller specific css/js rendering
 Rails.application.config.assets.precompile += ['*.css']
+Rails.application.config.assets.precompile += ['*.scss']
 Rails.application.config.assets.precompile += ['*.js']
 
 # All my lib images
