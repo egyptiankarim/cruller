@@ -13,10 +13,9 @@ class WelcomeController < ApplicationController
   def show
     @colour = Colour.new(hex_code: params[:colour])
 
-    @panel_colour = @colour.average > (COLOUR_MAX / 2) ? DARK_GREY : LIGHT_GREY
-    @text_colour = @colour.average > (COLOUR_MAX / 2) ? LIGHT_GREY : DARK_GREY
-
     if @colour.validate
+      @panel_colour = @colour.average > (COLOUR_MAX / 2) ? DARK_GREY : LIGHT_GREY
+      @text_colour = @colour.average > (COLOUR_MAX / 2) ? LIGHT_GREY : DARK_GREY
     else
       render 'errors/error_404'
     end

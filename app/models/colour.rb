@@ -1,6 +1,7 @@
 class Colour < ActiveRecord::Base
   validates :hex_code,
     presence: true,
+    length: { minimum: 6, maximum: 6 },
     format: { with: /[a-fA-F0-9]{6}/, message: "Invalid hex colour code." }
 
   def self.random_colour(red_max = 255, green_max = 255, blue_max = 255)
