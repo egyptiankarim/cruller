@@ -4,10 +4,18 @@ class Colour < ActiveRecord::Base
     length: { minimum: 6, maximum: 6 },
     format: { with: /[a-fA-F0-9]{6}/, message: "Invalid hex colour code." }
 
-  def self.random_colour(red_max = 255, green_max = 255, blue_max = 255)
-    red = rand(red_max)
-    green = rand(green_max)
-    blue = rand(blue_max)
+  def self.random_colour(limits = {})
+
+    red_min = limits[:red_min] || 0
+    red_max = limits[:red_max] || 255
+    green_min = limits[:green_min] || 0
+    green_max = limits[:green_max] || 255
+    blue_min = limits[:blue_min] || 0
+    blue_max = limits[:blue_max] || 255
+
+    red = rand(red_min..red_max).to_i
+    green = rand(green_min..green_max).to_i
+    blue = rand(blue_min..blue_max).to_i
 
     hex_code = "%s%s%s" % [red, green, blue].map { |c| to_hex(c) }
 

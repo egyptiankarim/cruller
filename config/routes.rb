@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   root to: 'welcome#index'
   get 'welcome/index', to: 'welcome#index', as: :welcome
   get 'show/:colour(.:format)', to: 'welcome#show', as: :show
+  get 'redish', to: 'welcome#redish', as: :redish
+  get 'greenish', to: 'welcome#greenish', as: :greenish
+  get 'blueish', to: 'welcome#blueish', as: :blueish
 
   match "/404" => "errors#error_404", via: [ :get, :post, :patch, :delete ]
 
