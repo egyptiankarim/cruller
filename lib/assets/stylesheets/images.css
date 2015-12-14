@@ -1,5 +1,11 @@
 #footer img {
 	height: 30px;
-	padding: 0px;
-	margin: 0px;
+	padding: 0;
+	margin: 0;
+}
+
+.navbar img {
+	height: 30px;
+	padding: 0;
+	margin: 0;
 }
