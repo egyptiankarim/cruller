@@ -2,6 +2,10 @@
 
 one:
   hex_code: MyString
+  name: MyString
+  hits: 1
 
 two:
   hex_code: MyString
+  name: MyString
+  hits: 1

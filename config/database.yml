@@ -6,7 +6,7 @@
 #
 default: &default
   adapter: sqlite3
-  pool: 5
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
 
 development:
@@ -21,9 +21,5 @@ test:
   database: db/test.sqlite3
 
 production:
-  adapter: postgresql
-  encoding: unicode
-  pool: 5
-  database: cruller_production
-  username: cruller
-  password: <%= ENV['CRULLER_DATABASE_PASSWORD'] %>
+  <<: *default
+  database: db/production.sqlite3

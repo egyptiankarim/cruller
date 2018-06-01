@@ -1,8 +1,8 @@
 require 'test_helper'
 
-class ErrorsControllerTest < ActionController::TestCase
-  test "should get 404" do
-    get :404
+class ErrorsControllerTest < ActionDispatch::IntegrationTest
+  test "should get error_404" do
+    get errors_error_404_url
     assert_response :success
   end
 

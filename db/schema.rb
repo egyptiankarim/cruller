@@ -1,4 +1,3 @@
-# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -11,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151211164404) do
+ActiveRecord::Schema.define(version: 2018_06_01_213200) do
 
   create_table "colours", force: :cascade do |t|
-    t.string   "hex_code",   limit: 6
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
+    t.string "hex_code"
+    t.string "name"
+    t.integer "hits"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
-
-  add_index "colours", ["hex_code"], name: "index_colours_on_hex_code", unique: true
 
 end

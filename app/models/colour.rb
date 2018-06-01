@@ -1,4 +1,4 @@
-class Colour < ActiveRecord::Base
+class Colour < ApplicationRecord
   validates :hex_code,
     presence: true,
     length: { minimum: 6, maximum: 6 },
