@@ -1,10 +1,8 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem
+gem 'rails'
 
 # Use Puma as the app server
 gem 'puma'

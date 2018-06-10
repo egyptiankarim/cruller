@@ -8,6 +8,8 @@ class ColourController < ApplicationController
 
     @panel_colour = @colour.average > (COLOUR_MAX / 2) ? DARK_GREY : LIGHT_GREY
     @text_colour = @colour.average > (COLOUR_MAX / 2) ? LIGHT_GREY : DARK_GREY
+
+    puts @colour
   end
 
   def show
