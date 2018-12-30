@@ -9,7 +9,7 @@ class ColourController < ApplicationController
     @panel_colour = @colour.average > (COLOUR_MAX / 2) ? DARK_GREY : LIGHT_GREY
     @text_colour = @colour.average > (COLOUR_MAX / 2) ? LIGHT_GREY : DARK_GREY
 
-    puts @colour
+    puts "\n\nCrueller Mix: ##{@colour}\n\n"
   end
 
   def show
@@ -18,8 +18,12 @@ class ColourController < ApplicationController
     if @colour.validate
       @panel_colour = @colour.average > (COLOUR_MAX / 2) ? DARK_GREY : LIGHT_GREY
       @text_colour = @colour.average > (COLOUR_MAX / 2) ? LIGHT_GREY : DARK_GREY
+
+      puts "\n\nCrueller: ##{@colour}\n\n"
     else
       render 'errors/error_404'
+
+      puts "\n\nCruerror: #W0MP!\n\n"
     end
   end
 end
