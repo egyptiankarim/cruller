@@ -15,5 +15,4 @@
 // require turbolinks
 //= require jquery
 //= require bootstrap
-//= require google_analytics
 // require_tree .
