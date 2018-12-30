@@ -6,8 +6,7 @@ class ColourController < ApplicationController
   def index
     @colour = Colour.random_colour
 
-    @panel_colour = @colour.average > (COLOUR_MAX / 2) ? DARK_GREY : LIGHT_GREY
-    @text_colour = @colour.average > (COLOUR_MAX / 2) ? LIGHT_GREY : DARK_GREY
+    text_mix()
 
     puts "\n\nCrueller Mix: ##{@colour}\n\n"
   end
@@ -16,8 +15,7 @@ class ColourController < ApplicationController
     @colour = Colour.new(hex_code: params[:colour])
 
     if @colour.validate
-      @panel_colour = @colour.average > (COLOUR_MAX / 2) ? DARK_GREY : LIGHT_GREY
-      @text_colour = @colour.average > (COLOUR_MAX / 2) ? LIGHT_GREY : DARK_GREY
+      text_mix()
 
       puts "\n\nCrueller: ##{@colour}\n\n"
     else
@@ -25,5 +23,12 @@ class ColourController < ApplicationController
 
       puts "\n\nCruerror: #W0MP!\n\n"
     end
+  end
+
+  private
+
+  def text_mix()
+    @panel_colour = @colour.average > (COLOUR_MAX / 2) ? DARK_GREY : LIGHT_GREY
+    @text_colour = @colour.average > (COLOUR_MAX / 2) ? LIGHT_GREY : DARK_GREY
   end
 end
