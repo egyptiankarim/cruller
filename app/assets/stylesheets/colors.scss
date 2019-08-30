@@ -1,0 +1,39 @@
+// Place all the styles related to the colour controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.panel {
+  margin-top: 250px;
+  opacity: 0.30;
+}
+
+.meta-panel {
+  margin-top: 0;
+}
+
+.panel a, .meta-list a {
+  text-decoration: none;
+}
+
+.jumbo {
+  font-family: "Nova Mono";
+}
+
+.jumbo-3 {
+  font-size: 3.00vw;
+}
+
+.jumbo-10 {
+  font-size: 10.00vw;
+}
+
+.color-meta {
+  font-family: "Nova Mono";
+  font-size: 5.00vw;
+}
+
+@media (min-width: 1200px) {
+  .jumbo-10 {
+    font-size: 100pt;
+  }
+}
