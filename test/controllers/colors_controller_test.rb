@@ -6,8 +6,8 @@ class ColorsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should get show" do
-    get colors_show_url
+  test "should get about" do
+    get colors_about_url
     assert_response :success
   end
 

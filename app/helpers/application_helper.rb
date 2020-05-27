@@ -1,4 +1,3 @@
-
 module ApplicationHelper
   # Quick way to automate pretty page titles.
   def view_title(page_title)
@@ -6,7 +5,7 @@ module ApplicationHelper
   end
 
   # Quick way to highlight active navigation bar areas.
-  def is_active(controller)
-    params[:controller] == controller ? "active" : nil
+  def is_active?(controller_action)
+    "#{params[:controller]}\##{params[:action]}" == controller_action ? "active" : nil
   end
 end

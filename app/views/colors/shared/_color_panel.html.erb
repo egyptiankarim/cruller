@@ -1,16 +1,20 @@
-<div class="panel" style="background-color: #<%= panel_color %>;">
-  <%= link_to(link) do %>
-  <div class="panel-body text-center" style="color: #<%= text_color %>;">
-    <div class="jumbo jumbo-10">
-      #<%= color %>
+<div class="container">
+  <div class="panel" style="background-color: #<%= panel_color %>;">
+    <%= link_to(link) do %>
+    <div class="panel-body" style="color: #<%= text_color %>;">
+      <div class="row text-center">
+        <div class="col-12">
+            <div class="jumbo jumbo-10">
+              #<%= color %>
+          </div>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col-4 jumbo jumbo-3">R: <%= format("%03d", color.red) %></div>
+        <div class="col-4 jumbo jumbo-3">G: <%= format("%03d", color.green) %></div>
+        <div class="col-4 jumbo jumbo-3">B: <%= format("%03d", color.blue) %></div>
+      </div>
     </div>
-    <div class="jumbo jumbo-3">
-      <ul class="list-inline">
-        <li class="list-inline-item">R: <%= format("%03d", color.red) %></li>
-        <li class="list-inline-item">G: <%= format("%03d", color.green) %></li>
-        <li class="list-inline-item">B: <%= format("%03d", color.blue) %></li>
-      </ul>
-    </div>
+    <% end %>
   </div>
-  <% end %>
 </div>

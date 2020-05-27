@@ -1,6 +1,6 @@
 class Color < ApplicationRecord
   has_many :color_names, through: :votes
-
+  
   validates :hex_code,
     presence: true,
     length: { minimum: 6, maximum: 6 },
