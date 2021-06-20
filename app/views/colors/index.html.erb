@@ -1,18 +1,24 @@
 <%- view_title "Welcome!" %>
 
 <% content_for :main do %>
+
 <style>
   body {
     background-color: #<%= @color %>;
   }
 </style>
 
-<div class="row justify-content-center">
-  <div class="col col-xs-12 col-md-8">
-    <%= color_panel(@color, @panel_color, @text_color, root_path) %>
+<div class="container">
+  <div class="row text-center">
+    <div class="col-sm-8 mx-auto">
+      <%= color_card(@color, @card_color, @text_color, root_path) %>
+    </div>
   </div>
-  <div class="col col-xs-12 col-md-8">
-    <%= meta_panel(@color, @panel_color, @text_color) %>
+  <div class="row text-start">
+    <div class="col-sm-8 mx-auto">
+      <%= meta_card(@color, @card_color, @text_color) %>
+    </div>
   </div>
 </div>
+
 <% end %>

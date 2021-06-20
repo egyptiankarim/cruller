@@ -2,16 +2,17 @@
 <html lang="en">
   <%= render partial: "shared/head" %>
 
-  <body>
+  <body class="d-flex flex-column h-100">
     <%= render partial: "shared/nav" %>
 
-    <main role="main" class="container">
-      <!-- Begin page content -->
+    <!-- Begin page content -->
+    <main>
       <%= yield :main %>
     </main>
 
     <%= render partial: "shared/foot" %>
-
-    <%= render partial: "shared/scripts" %>
   </body>
-</html>
+
+  <%= render partial: "shared/scripts" %>
+
+  </html>

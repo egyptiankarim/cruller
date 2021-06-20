@@ -1,0 +1,8 @@
+<div class="meta fancy">
+  <%= link_to(show_path(color: color.to_s)) do %>
+  <div style="color: #<%= card_color %>; opacity: 0.50;">
+    <span class="fa fa-link"></span>
+    <span class=""><%= "https://cruller.herokuapp.com/#{color}" %></span>
+  </div>
+  <% end %>
+</div>

@@ -12,7 +12,7 @@ class ColorsController < ApplicationController
 
     respond_to do |format|
       format.html
-      format.json { render json: @color }
+      format.json { render json: @color.hex_code }
     end
   end
 
@@ -36,7 +36,7 @@ class ColorsController < ApplicationController
   private
 
   def text_mix()
-    @panel_color = @color.average > (COLOR_MAX / 2) ? DARK_GREY : LIGHT_GREY
+    @card_color = @color.average > (COLOR_MAX / 2) ? DARK_GREY : LIGHT_GREY
     @text_color = @color.average > (COLOR_MAX / 2) ? LIGHT_GREY : DARK_GREY
   end
 end
